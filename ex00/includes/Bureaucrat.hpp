@@ -36,7 +36,7 @@ class Bureaucrat
 		void		decrement();
 
 
-		Bureaucrat	&operator<<(const Bureaucrat &copy);
+		Bureaucrat	&operator<<(Bureaucrat const &copy);
 
 		struct GradeTooHighException : public std::exception {
 			const char *what () const throw(){
@@ -50,7 +50,7 @@ class Bureaucrat
 		};
 };
 
-//std::ostream &operator<<(std::ostream &output, const Bureaucrat &Bureaucrat);
+//std::ostream &operator<<(std::ostream &output, const Bureaucrat &input);
 
 
 #endif

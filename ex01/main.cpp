@@ -3,29 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:20:56 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/18 23:54:28 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/20 21:41:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/Bureaucrat.hpp"
+#include "./includes/Form.hpp"
 
-/*error check not all exceptions are working, incremento/decremento soprattutto*/
+//signed bool-> doesnt like it
 
-/* TESTCASES: < 1 / >150 / increment a 0 / decrement a 151 / implement output method */
-//Still implement OUTPUT METHOD, sonst OK..
+//STILL IMPLEMENT: stdoss stream << like in ex00
+//SET 3 vars in header const :/
+
 int main()
 {
-	Bureaucrat Bureaucrat("Jacques", -9);
-	std::cout << "Monsier " << Bureaucrat.getName() << " have grade " << Bureaucrat.getGrade() << std::endl;
-	
-	//Bureaucrat.increment();
+	//Form form("Form", 0, 44);
+	//Bureaucrat bureaucrat("Charlie", 42);
+
+	//form.beSigned(bureaucrat);
 	//std::cout << "Monsier " << Bureaucrat.getName() << " have grade " << Bureaucrat.getGrade() << std::endl;
 	
-	// Bureaucrat.decrement();
-	// std::cout << "Monsier " << Bureaucrat.getName() << " have grade " << Bureaucrat.getGrade() << std::endl;
 	
 	
 	return (0);

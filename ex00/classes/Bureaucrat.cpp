@@ -73,6 +73,7 @@ void	Bureaucrat::increment()
 	try {
 		if ((this->_grade - 1) < 1)
 			throw (Bureaucrat::GradeTooHighException ());
+		this->_grade --;
 	}
 	catch (Bureaucrat::GradeTooHighException  &e)
 	{
@@ -86,7 +87,8 @@ void	Bureaucrat::decrement()
 	try {
 		if ((this->_grade + 1) > 150)
 			throw (Bureaucrat::GradeTooLowException ());
-	}
+		this->_grade ++;	
+}
 	catch (Bureaucrat::GradeTooLowException  &e)
 	{
 		std::cerr << "An Exception was caught. Grade can't be lower then 150!" << std::endl;
@@ -95,7 +97,8 @@ void	Bureaucrat::decrement()
 	
 }
 
-// std::ostream &operator<<(std::ostream &output, const Bureaucrat &Bureaucrat)
-// {
-// 	output << Bureaucrat.getName() << ", Bureaucrat grade " << Bureaucrat.getGrade();
-// }
+/* std::ostream &operator<<(std::ostream &output, Bureaucrat const &input)
+ {
+ 	output << input.getName() << ", Bureaucrat grade " << input.getGrade();
+	return (output);
+ }*/
