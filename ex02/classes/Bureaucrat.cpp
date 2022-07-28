@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:32:36 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 04:33:21 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:37:19 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,12 @@ void	Bureaucrat::decrement()
 	}
 	
 }
+
+void Bureaucrat::executeForm(Form const & form)
+{
+	//std::cout << this->getName() << " executed " << form.getName() << std::endl;
+}
+
 
 std::ostream &operator<<(std::ostream &output, Bureaucrat const &input)
  {

@@ -6,12 +6,13 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:39:35 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 11:08:34 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/28 17:32:23 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/RobotomyRequestForm.hpp"
- #include <curses.h>
+#include <curses.h>
+#include <stdlib.h>
  
 RobotomyRequestForm::RobotomyRequestForm(void)
 {
@@ -38,12 +39,17 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy) : Form
 void	RobotomyRequestForm::execute(Bureaucrat const & executor)
 {
 	beSigned(executor);
+	srand(time(NULL));
+	int v = rand() % 100 + 1;
 	try
 	{
 		if (executor.getGrade() < 46)
 		{
-			//beep();//Print the special character ASCII BEL (code 7)
-			std::cout << this->getName() << " has been robotomized successfully 50\% of the time!" << std::endl;
+			std::cout << '\a' ;//print default bell (ascii table 7) - also printf \\a on terminal
+			if (v % 2 == 0)
+				std::cout << this->getName() << " has been robotomized successfully. You've been lucky by a 50\% odds probability! Your lucky number is: " << v << std::endl;
+			else
+				std::cout << this->getName() << " has not been robotomized successfully. You've been unlucky by a 50\% odds probability! Your unlucky number is: " << v << std::endl;
 		}
 		else
 			throw (Form::GradeLowerThenExec());

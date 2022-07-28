@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:25:13 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 10:24:08 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/28 17:57:03 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	Form::beSigned(Bureaucrat const & bureaucrat)
 {
 	try
 	{
-		if (bureaucrat.getGrade() <= this-> _grade)
+		if (bureaucrat.getGrade() <= this-> _grade)	//
 			this->_sign = true;
 		else
 			throw (Form::GradeTooLowException());

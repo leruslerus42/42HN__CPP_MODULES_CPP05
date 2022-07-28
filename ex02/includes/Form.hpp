@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:24:36 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 10:10:33 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:37:59 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class Form
 		void	const	setTarget(std::string t);
 
 		virtual void	execute(Bureaucrat const & executor) = 0;
+		
 		struct GradeTooHighException : public std::exception {
 			const char *what () const throw(){
 				return ("Exception!");
