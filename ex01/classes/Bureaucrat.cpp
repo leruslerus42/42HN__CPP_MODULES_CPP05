@@ -6,23 +6,23 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:22:31 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/18 23:58:17 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/28 04:30:51 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(void)
+Bureaucrat::Bureaucrat(void) : _name("none")
 {
 	std::cout << "Constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
 	std::cout << "Overloaded Constructor called" << std::endl;
-	this->_name = name;	
 	try {
 		this->_grade = grade;
+		//std::cout << this->_grade << " dqqw  ";
 		if (this->_grade > 150)
 			throw (Bureaucrat::GradeTooLowException ());
 		else if (this->_grade < 1)
@@ -46,7 +46,7 @@ Bureaucrat::~Bureaucrat(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
@@ -58,7 +58,7 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &copy)
 	return (*this);
 }
 
-std::string	Bureaucrat::getName()
+std::string	Bureaucrat::getName() const
 {
 	return (this->_name);
 }
@@ -97,8 +97,8 @@ void	Bureaucrat::decrement()
 	
 }
 
-/* std::ostream &operator<<(std::ostream &output, Bureaucrat const &input)
+std::ostream &operator<<(std::ostream &output, Bureaucrat const &input)
  {
  	output << input.getName() << ", Bureaucrat grade " << input.getGrade();
 	return (output);
- }*/
+ }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 00:00:35 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 04:19:08 by rrajaobe         ###   ########.fr       */
+/*   Created: 2022/07/28 04:25:13 by rrajaobe          #+#    #+#             */
+/*   Updated: 2022/07/28 10:24:08 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,8 @@ Form::Form(void) : _name("none"), _sign(false), _gradeToSign(150), _grade (150)
 Form::Form(std::string name, int gradeToSign, int grade) : _name(name), _sign(false), _gradeToSign(gradeToSign), _grade(grade)
 {
 	std::cout << "Overloaded Constructor called" << std::endl;
-	//this->_name = name;
-	//this->_sign = false;
 	try {
-	//	this->_grade = grade;
-	//	this->_gradeToSign = gradeToSign;
+
 		if (this->_grade > 150 || gradeToSign > 150)
 			throw (Form::GradeTooLowException ());
 		else if (this->_grade < 1 || gradeToSign < 1)
@@ -59,40 +56,20 @@ Form	&Form::operator = (const Form &copy)
 	return (*this);
 }
 
-// void	Form::setName(std::string name)
-// {
-// 	this->_name = name;
-// }
-
 std::string	Form::getName() const
 {
 	return (this->_name);
 }
-
-// void	Form::setGrade(int grade)
-// {
-// 	this->_grade = grade;
-// }
 
 int			Form::getGrade() const
 {
 	return (this->_grade);
 }
 
-// void	Form::setGradeToSign(int gradeToSign)
-// {
-// 	this->_gradeToSign = gradeToSign;
-// }
-
 int			Form::getGradetoSign() const
 {
 	return (this->_gradeToSign);
 }
-
-// void	Form::setSigned(bool sign)
-// {
-// 	this->_sign = sign;
-// }
 
 bool			Form::getSigned() const
 {
@@ -104,10 +81,7 @@ void	Form::beSigned(Bureaucrat const & bureaucrat)
 	try
 	{
 		if (bureaucrat.getGrade() <= this-> _grade)
-		{
 			this->_sign = true;
-			//std::cout << bureaucrat.getGrade() << "      " << this-> _grade;
-		}
 		else
 			throw (Form::GradeTooLowException());
 	}
@@ -124,7 +98,19 @@ void	Form::signForm(Bureaucrat const & bureaucrat)
 }
 
 std::ostream &operator<<(std::ostream &output, Form const &input)
- {
+{
  	output << input.getName() << " is signed " << input.getSigned() << "with signed grade: " << input.getGradetoSign() << " and with execution grade: " << input.getGrade();
 	return (output);
- }
+}
+
+std::string const Form::getTarget()
+{
+	return (target);
+}
+
+
+
+void	const	Form::setTarget(std::string t)
+{
+	target = t;
+}

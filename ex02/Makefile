@@ -6,7 +6,7 @@
 #    By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/18 21:19:17 by rrajaobe          #+#    #+#              #
-#    Updated: 2022/07/18 21:19:20 by rrajaobe         ###   ########.fr        #
+#    Updated: 2022/07/28 04:23:49 by rrajaobe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SELF_WRN = -Wno-self-assign-field
 
-NAME = 	abstract_class
+NAME = 	form28b
 
 SRC = 	main.cpp \
 		./classes/*.cpp \
