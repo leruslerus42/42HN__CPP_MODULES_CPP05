@@ -5,39 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 04:24:12 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 21:16:37 by rrajaobe         ###   ########.fr       */
+/*   Created: 2022/07/28 21:21:16 by rrajaobe          #+#    #+#             */
+/*   Updated: 2022/07/29 21:20:34 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "./includes/Intern.hpp"
 #include "./includes/PresidentialPardonForm.hpp"
 #include "./includes/RobotomyRequestForm.hpp"
 #include "./includes/ShrubberyCreationForm.hpp"
 
-/*ADD BEI ALL EXECUTORS the const at end: execute(Bureaucrat const & executor) const -> PROBLEM: beSigned method is not const, and if I put const fuck it a bit ab.*/
-/*ADD executeForm(Form const & form)-> Do it*/
+/*work just first, debug*/
 
 int main()
 {
+	Intern someRandomIntern;
+	Form*	rrf;
 
-	//Form form("Form", 150, 11);
-	Bureaucrat bureaucrat("Charlie", 44);
-
-	// PresidentialPardonForm pform = PresidentialPardonForm("Pform");/*1-5*/
-	// pform.execute(bureaucrat);
-
-	 RobotomyRequestForm rform = RobotomyRequestForm("Rform"); /*1-45*/
-	rform.execute(bureaucrat);
-
-	 
-
-
-	// ShrubberyCreationForm sform = ShrubberyCreationForm("Sform"); /*1-137*/
-	// sform.execute(bureaucrat);
-
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	rrf = someRandomIntern.makeForm("presidential pardon request", "Bender");
+	rrf = someRandomIntern.makeForm("shrubbery creation request", "Bender");
 	
-	//bureaucrat.executeForm(rform); NOT WORKING
-	
-	
+	system("leaks intern");
 	return (0);
 }

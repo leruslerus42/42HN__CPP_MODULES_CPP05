@@ -6,7 +6,7 @@
 #    By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/18 21:19:17 by rrajaobe          #+#    #+#              #
-#    Updated: 2022/07/18 21:19:43 by rrajaobe         ###   ########.fr        #
+#    Updated: 2022/07/28 21:22:45 by rrajaobe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SELF_WRN = -Wno-self-assign-field
 
-NAME = 	
+NAME = 	intern
 
 SRC = 	main.cpp \
 		./classes/*.cpp \
