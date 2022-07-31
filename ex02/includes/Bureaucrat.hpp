@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:32:30 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 21:18:34 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 21:56:03 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <stdlib.h>
-//problem bei include fom, need to initialize abstract class
+
 class Bureaucrat
 {
 	private:
@@ -35,7 +35,7 @@ class Bureaucrat
 		void		increment();
 		void		decrement();
 
-	//	void executeForm(Form const & form);
+		//void executeForm(Form const & form);
 			
 		struct GradeTooHighException : public std::exception {
 			const char *what () const throw(){

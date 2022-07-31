@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:39:35 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 17:32:23 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 21:06:27 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy) : Form
 	*this = copy;
 }
 
-void	RobotomyRequestForm::execute(Bureaucrat const & executor)
+void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
 	beSigned(executor);
 	srand(time(NULL));
@@ -45,7 +45,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor)
 	{
 		if (executor.getGrade() < 46)
 		{
-			std::cout << '\a' ;//print default bell (ascii table 7) - also printf \\a on terminal
+			std::cout << "Some drilling noises" << std::endl;
 			if (v % 2 == 0)
 				std::cout << this->getName() << " has been robotomized successfully. You've been lucky by a 50\% odds probability! Your lucky number is: " << v << std::endl;
 			else

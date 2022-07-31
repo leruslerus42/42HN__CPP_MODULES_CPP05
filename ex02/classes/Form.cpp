@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:25:13 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 17:57:03 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 20:52:27 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,17 +71,22 @@ int			Form::getGradetoSign() const
 	return (this->_gradeToSign);
 }
 
+void			Form::setSigned(bool sign) const
+{
+	this->_sign = sign;
+}
+
 bool			Form::getSigned() const
 {
 	return (this->_sign);
 }
 
-void	Form::beSigned(Bureaucrat const & bureaucrat)
+void	Form::beSigned(Bureaucrat const & bureaucrat) const
 {
 	try
 	{
-		if (bureaucrat.getGrade() <= this-> _grade)	//
-			this->_sign = true;
+		if (bureaucrat.getGrade() <= this-> _grade)
+			setSigned(true);
 		else
 			throw (Form::GradeTooLowException());
 	}

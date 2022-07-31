@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:39:26 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 15:58:50 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 20:56:36 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &cop
 	*this = copy;
 }
 
-void	PresidentialPardonForm::execute(Bureaucrat const & executor)
+void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	beSigned(executor);
 	try

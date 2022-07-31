@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:39:46 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 15:59:50 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 20:56:43 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class PresidentialPardonForm : public Form
 		~PresidentialPardonForm(void);
 		PresidentialPardonForm(const PresidentialPardonForm &copy);
 
-		virtual void	execute(Bureaucrat const & executor);
+		virtual void	execute(Bureaucrat const & executor) const;
 
 
 		PresidentialPardonForm	&operator = (const PresidentialPardonForm &copy);

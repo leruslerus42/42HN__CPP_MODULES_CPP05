@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:39:52 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 16:08:09 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 20:29:47 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class RobotomyRequestForm : public Form
 		~RobotomyRequestForm(void);
 		RobotomyRequestForm(const RobotomyRequestForm &copy);
 
-		virtual void	execute(Bureaucrat const & executor);
+		virtual void	execute(Bureaucrat const & executor) const;
 
 
 		RobotomyRequestForm	&operator = (const RobotomyRequestForm &copy);

@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:39:58 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/28 17:33:05 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/07/31 20:56:14 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ShrubberyCreationForm : public Form
 		~ShrubberyCreationForm(void);
 		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
 
-		virtual void	execute(Bureaucrat const & executor);
+		virtual void	execute(Bureaucrat const & executor) const;
 
 		ShrubberyCreationForm	&operator = (const ShrubberyCreationForm &copy);
 };
