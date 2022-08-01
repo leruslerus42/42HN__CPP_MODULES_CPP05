@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:32:30 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/31 21:56:03 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/08/01 22:56:25 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <stdlib.h>
+
+class Form;
 
 class Bureaucrat
 {
@@ -35,7 +37,7 @@ class Bureaucrat
 		void		increment();
 		void		decrement();
 
-		//void executeForm(Form const & form);
+		void executeForm(Form const & form);
 			
 		struct GradeTooHighException : public std::exception {
 			const char *what () const throw(){

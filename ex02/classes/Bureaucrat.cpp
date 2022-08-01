@@ -6,11 +6,12 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:32:36 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/31 21:56:16 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/08/01 22:58:26 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/Form.hpp"
 
 Bureaucrat::Bureaucrat(void) : _name("none")
 {
@@ -95,10 +96,10 @@ void	Bureaucrat::decrement()
 	
 }
 
-// void Bureaucrat::executeForm(Form const & form)
-// {
-// 	std::cout << this->getName() << " executed " << form.getName() << std::endl;
-// }
+void Bureaucrat::executeForm(Form const & form)
+{
+	std::cout << this->getName() << " executed " << form.getName() << std::endl;
+}
 
 
 std::ostream &operator<<(std::ostream &output, Bureaucrat const &input)

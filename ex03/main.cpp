@@ -6,7 +6,7 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 21:21:16 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/29 21:20:34 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/08/01 23:23:20 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #include "./includes/PresidentialPardonForm.hpp"
 #include "./includes/RobotomyRequestForm.hpp"
 #include "./includes/ShrubberyCreationForm.hpp"
-
-/*work just first, debug*/
 
 int main()
 {
@@ -26,6 +24,5 @@ int main()
 	rrf = someRandomIntern.makeForm("presidential pardon request", "Bender");
 	rrf = someRandomIntern.makeForm("shrubbery creation request", "Bender");
 	
-	system("leaks intern");
 	return (0);
 }

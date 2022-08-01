@@ -6,15 +6,13 @@
 /*   By: rrajaobe <rrajaobe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 04:24:12 by rrajaobe          #+#    #+#             */
-/*   Updated: 2022/07/31 21:55:36 by rrajaobe         ###   ########.fr       */
+/*   Updated: 2022/08/01 23:21:52 by rrajaobe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/PresidentialPardonForm.hpp"
 #include "./includes/RobotomyRequestForm.hpp"
 #include "./includes/ShrubberyCreationForm.hpp"
-
-/*ADD executeForm(Form const & form)-> Conflict bei include form in bureaucrat class*/
 
 int main()
 {
@@ -33,7 +31,10 @@ int main()
 	sform.execute(bureaucrat);
 
 	
-	//bureaucrat.executeForm(rform); NOT WORKING
+	bureaucrat.executeForm(pform);
+	bureaucrat.executeForm(rform);
+	bureaucrat.executeForm(sform);
+
 	
 	
 	return (0);
