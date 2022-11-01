@@ -14,6 +14,4 @@ Please Note: You can take a look in the subject.pdf file for more relative infor
 
 ## RESULT
 
-<img width="1172" alt="Screenshot 2022-11-01 at 04 41 57" src="https://user-images.githubusercontent.com/85942176/199163848-46e68043-d075-42dc-ae01-8b00fa042258.png">
-
-
+<img width="846" alt="Screenshot 2022-11-01 at 07 32 05" src="https://user-images.githubusercontent.com/85942176/199173174-0524bebe-6aaf-4a9f-8f5a-35c5dfbf43da.png">
